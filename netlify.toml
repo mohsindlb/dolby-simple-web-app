@@ -1,0 +1,24 @@
+[dev] 
+  publish = "www"
+  functions = "functions"
+  
+[build] 
+  publish = "www"
+  command = "echo No build command yet!"
+  functions = "functions"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "ALLOW"
+    X-XSS-Protection = "0"
+
+[template.environment]
+  APP_IDENTIFIER = "Enter your unique app identifier or URL"
+  CONSUMER_KEY = "Consumer Key (from dolby.io)"
+  CONSUMER_SECRET = "Consumer Secret (from dolby.io)"

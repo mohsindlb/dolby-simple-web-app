@@ -1,0 +1,20 @@
+{
+  "name": "GSG-iOS-token-server",
+  "version": "1.0.0",
+  "description": "Dolby.io iOS Getting Started Guide - Token Server",
+  "dependencies": {
+    "axios": "^0.22.0",
+    "dotenv": "^10.0.0"
+  },
+
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "netlify dev",
+    "live": "netlify dev --live"
+  },
+  "author": "Dan Zeitman - Dolby.io",
+  "license": "See LICENSE in this repo",
+  "devDependencies": {
+    "netlify-cli": "^8.13.2"
+  }
+}
