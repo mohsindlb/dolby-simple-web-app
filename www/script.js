@@ -645,8 +645,8 @@ $("#start-audio-btn").click(() => {
     logMessage("VoxeetSDK.conference.startAudio");
 
     // Start sharing the audio with the other participants
-    VoxeetSDK.conference.startAudio(VoxeetSDK.session.participant)
-        .then(() => VoxeetSDK.mediaDevice.selectAudioInput($('#input-audio-devices').val()))
+    VoxeetSDK.audio.local.start()
+        // .then(() => VoxeetSDK.mediaDevice.selectAudioInput($('#input-audio-devices').val()))
         .then(() => {
             $("#start-audio-btn").attr('disabled', true);
             $("#stop-audio-btn").attr('disabled', false);
@@ -661,7 +661,7 @@ $("#stop-audio-btn").click(() => {
 
     // Stop sharing the audio with the other participants
 
-    VoxeetSDK.conference.stopAudio(VoxeetSDK.session.participant)
+    VoxeetSDK.audio.local.stop()
         .then(() => {
             $("#start-audio-btn").attr('disabled', false);
             $("#stop-audio-btn").attr('disabled', true);
